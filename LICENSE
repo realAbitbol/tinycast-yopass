@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Third-party material:
-
-* vendor/openpgp-5.11.3.min.js is OpenPGP.js 5.11.3 (the browser UMD build), licensed
-  LGPL-3.0-or-later. The licence text is kept in vendor/LICENSE.LGPL-3.0.txt; the full source is
-  at https://github.com/openpgpjs/openpgpjs. The built bundle share-selected-text.js embeds it.
-* assets/icon.png comes from the Yopass Raycast extension in raycast/extensions (MIT).

@@ -268,7 +268,8 @@ Upstream report: [raycast/extensions#30813](https://github.com/raycast/extension
   [raycast/extensions](https://github.com/raycast/extensions) repository.
 * This project is **not affiliated** with Yopass, Raycast or Tinycast.
 
-This project's own code is **MIT** — see [LICENSE](LICENSE).
+This project's own code is **MIT** — see [LICENSE](LICENSE). Third-party material (the vendored
+OpenPGP.js, the icon) is listed in [NOTICE](NOTICE).
 
 Contributions are welcome; [CONTRIBUTING.md](CONTRIBUTING.md) is short and mostly about not adding
 dependencies.

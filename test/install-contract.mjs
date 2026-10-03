@@ -89,9 +89,15 @@ check("nothing that ships contains a private host or a machine path", () => {
   }
 });
 check("the licence and vendor notices are present", () => {
-  for (const file of ["LICENSE", "CONTRIBUTING.md", "SECURITY.md", "vendor/README.md", "vendor/LICENSE.LGPL-3.0.txt", "assets/README.md"]) {
+  for (const file of ["LICENSE", "NOTICE", "CONTRIBUTING.md", "SECURITY.md", "vendor/README.md", "vendor/LICENSE.LGPL-3.0.txt", "assets/README.md"]) {
     assert.ok(statSync(join(root, file)).size > 100, `${file} is missing or empty`);
   }
+});
+check("LICENSE is plain MIT, so GitHub detects the licence (no appended notices)", () => {
+  const licence = read("LICENSE").toString("utf8");
+  assert.match(licence, /^MIT License\n\nCopyright \(c\) \d{4} /);
+  assert.match(licence, /THE SOFTWARE IS PROVIDED "AS IS"/);
+  assert.ok(!/third-party/i.test(licence), "third-party notices belong in NOTICE");
 });
 
 if (failures > 0) {

@@ -1,0 +1,21 @@
+# Third-party material
+
+This licence (MIT, see [LICENSE](LICENSE)) covers this project's own code. Two things that ship in
+this repository are somebody else's:
+
+## `vendor/openpgp-5.11.3.min.js` — OpenPGP.js
+
+* Upstream: <https://github.com/openpgpjs/openpgpjs>
+* Version: 5.11.3, file `dist/openpgp.min.js` (the browser UMD build)
+* Licence: **LGPL-3.0-or-later**. The licence text is kept in
+  [`vendor/LICENSE.LGPL-3.0.txt`](vendor/LICENSE.LGPL-3.0.txt).
+* The built command `share-selected-text.js` **embeds** this library, so the bundle as shipped is
+  LGPL-3.0-or-later code carrying MIT code, not MIT alone. Its sha256 is pinned in `build.mjs`, and
+  `vendor/README.md` documents why this build (and not the Node one) is vendored.
+
+## `assets/icon.png` — the Yopass logo
+
+Taken from the Yopass Raycast extension (`ricoberger/yopass`) in the MIT-licensed
+[`raycast/extensions`](https://github.com/raycast/extensions) repository.
+
+This project is not affiliated with the Yopass maintainers, Raycast or Tinycast.
