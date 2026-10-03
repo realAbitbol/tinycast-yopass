@@ -1,0 +1,62 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "yopass-share",
+  "title": "Yopass Share",
+  "description": "Encrypt the selected text and copy a one-click Yopass link",
+  "icon": "icon.png",
+  "author": "realAbitbol",
+  "license": "MIT",
+  "categories": ["Security"],
+  "platforms": ["macOS"],
+  "commands": [
+    {
+      "name": "share-selected-text",
+      "title": "Share Selected Text",
+      "description": "Encrypt the selection and copy a one-click Yopass link",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "url",
+      "type": "textfield",
+      "required": true,
+      "title": "Yopass URL",
+      "default": "https://share.yopass.se",
+      "description": "Base URL of the Yopass web UI, used to build the link (no trailing slash)"
+    },
+    {
+      "name": "apiUrl",
+      "type": "textfield",
+      "required": true,
+      "title": "Yopass API URL",
+      "default": "https://api.yopass.se",
+      "description": "Base URL of the Yopass API. Identical to the URL above on a single-origin instance"
+    },
+    {
+      "name": "duration",
+      "type": "dropdown",
+      "required": false,
+      "title": "Expiration",
+      "default": "86400",
+      "data": [
+        { "title": "One Hour", "value": "3600" },
+        { "title": "One Day", "value": "86400" },
+        { "title": "One Week", "value": "604800" }
+      ]
+    },
+    {
+      "name": "oneTime",
+      "type": "checkbox",
+      "required": false,
+      "title": "One-Time Download",
+      "label": "Delete the secret after the first view",
+      "default": true
+    }
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node test/run-tests.mjs",
+    "verify": "node build.mjs --check"
+  }
+}

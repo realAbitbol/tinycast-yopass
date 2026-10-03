@@ -1,0 +1,9 @@
+# Nothing here is needed to install the extension: the root is the install layout, and
+# share-selected-text.js is committed on purpose (it is what gets installed).
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lockb
+.DS_Store
+*.log
